@@ -1,0 +1,50 @@
+.benefits {
+  padding-top: 94px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.advantage {
+  display: flex;
+
+.advantage__item {
+  margin-left: 30px;
+  width: 270px;
+
+&:first-child {
+  margin-left: 0px;
+}
+}
+
+.advantage__icon {
+@include centered;
+  background-color: #f5f4fa;
+  width: 270px;
+  height: 120px;
+}
+
+.advantage__heading {
+@include standart-text ($text,$font-size,700);
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+.advantage__text {
+@include standart-text($text,$font-size,$font-weight);
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+}

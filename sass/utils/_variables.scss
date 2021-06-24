@@ -1,0 +1,47 @@
+$color-link: #2196f3;
+$color-text: #ffffff;
+$color-p: #757575;
+$text: #212121;
+$font-family: Roboto;
+$font-size: 14px;
+$font-style: normal;
+$font-logo: Raleway;
+$font-size-logo: 26px;
+$font-weight: 400;
+
+
+
+// /* ^Переменные */
+// :root {
+//   --color-link: #2196f3;
+//   --text: #212121;
+//   --color-text: #ffffff;
+//   --color-p: #757575;
+//   --font-family: Roboto;
+//   --font-size: 14px;
+//   --font-style: normal;
+//   --font-logo: Raleway;
+//   --font-size-logo: 26px;
+// }
+
+// @mixin standart-text ($text, $font-size, $font-weight) {
+//   color: $text;
+//   font-family: $font-family;
+//   font-size: $font-size;
+//   font-style: $font-style;
+//   font-weight:$font-weight;
+// }
+
+// @mixin centered () {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// @mixin container () {  
+//   width: 1200px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding-left: 15px;
+//   padding-right: 15px;
+// }

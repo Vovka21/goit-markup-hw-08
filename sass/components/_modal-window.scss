@@ -1,0 +1,210 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  height: 581px;
+  background-color: white;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+    0px 1px 3px 0px #0000001f;
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+ @include centered;
+  cursor: pointer;
+
+&:hover,
+&:focus {
+  fill: $color-link;
+}
+}
+
+.modal-window__text {
+  @include standart-text ($text,20px,700);
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-align: center;  
+}
+
+.list-form {
+  margin: 12px auto 0px;
+
+.list-form__info {
+  @include standart-text ($color-p,12px,$font-weight);
+  line-height: 1.2;
+  letter-spacing: 0.01em;  
+  position: relative;
+  margin-top: 10px;
+
+&:first-child {
+  margin-top: 0;
+}
+
+&:focus-within > .list-form__icon {
+  fill: $color-link;
+}
+
+&:focus-within > .list-form__input,
+&:focus-within > .list-form__textarea {
+  border: 1px solid $color-link;
+  border-radius: 4px;
+  outline: none;
+}
+}
+
+.list-form__label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.list-form__input {
+  height: 40px;
+  width: 100%;
+  padding-left: 42px;
+  border-radius: 4px;
+  border: 1px solid #21212133;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:hover + .list-form__icon {
+  fill: $color-link;
+}
+}
+
+.list-form__input:hover,
+.list-form__textarea:hover {
+  fill: $color-link;
+  border: 1px solid $color-link;
+  cursor: pointer;
+}
+
+.list-form__icon {
+  position: absolute;
+  content: "";
+  bottom: 11px;
+  left: 12px;
+  display: inline-block;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-form__textarea {
+  resize: none;
+  height: 120px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #21212133;
+  padding: 12px 16px;
+  @include standart-text ($text,12px,$font-weight);
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+&::placeholder {
+  @include standart-text (#75757580,12px,$font-weight);
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  text-align: left;  
+}
+}
+
+.list-form__contract {
+@include centered;
+@include standart-text($color-p,$font-size,$font-weight);
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  margin-top: 20px;  
+}
+
+.list-form__label-checkbox {
+@include centered;
+
+&::after {
+  content: " ";
+  display: inline-block;
+}
+}
+
+
+
+.list-form__checkbox {
+  -webkit-appearance: none;
+  position: absolute;
+  
+  &:checked + .list-form__icon-checkbox {
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  background-color: $color-link;
+  border-color: $color-link;
+}
+}
+
+.list-form__icon-checkbox {
+  display: inline-block;
+  border: 2px solid #212121;
+  border-radius: 4px;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+}
+
+.list-form__link {
+  color: $color-link;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+}
+
+.button-send {
+  text-align: center;
+}
+
+.send {
+  height: 50px;
+  width: 200px;
+  border-radius: 4px;
+  border: none;
+  background-color: $color-link;
+  color: white;
+  cursor: pointer;
+  margin-top: 30px;
+  
+
+&:hover,
+&:focus {
+  background-color: #188ce8;
+}
+}

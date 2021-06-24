@@ -1,0 +1,148 @@
+.footer {
+  background-color: #2f303a;
+  margin-left: auto;
+  margin-right: auto;
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer-logo {
+  padding: 60px 0;
+}
+
+.footer-logo__studio {
+  color: $color-text;
+  font-family: $font-logo;
+  font-size: $font-size-logo;
+  font-style: $font-style;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+}
+
+.list-address {
+  margin-top: 20px;
+
+.list-address__item {
+  padding-bottom: 9px;
+
+&:last-child {
+  padding-bottom: 0px;
+}
+}
+
+.list-address__map {
+  @include standart-text ($color-text,$font-size,$font-weight);
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:focus,
+&:hover {
+  color: $color-link;
+}
+}
+
+.list-address__communication {
+  opacity: 60%;
+  text-decoration: none;
+  @include standart-text ($color-text,$font-size,$font-weight);
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:focus,
+&:hover {
+  color: $color-link;
+}
+}
+}
+
+.social {
+  padding: 72px 0 100px;
+
+.social__text {
+  @include standart-text ($color-text,$font-size,700);
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+}
+
+.social-list {
+  display: flex;
+  margin-top: 20px;
+
+.social-list__item {
+  margin-left: 10px;
+
+&:first-child {
+  margin-left: 0;
+}
+}
+
+.social-list__link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border: none;
+  color: #afb1b8;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:focus,
+&:hover {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+}
+
+.social-list__logo {
+  fill: currentColor;
+}
+}
+
+.spam {
+  display: flex;
+  align-items: flex-end;
+  padding: 72px 0 100px;
+
+.button {
+@include centered
+}
+}
+
+.button__telegram {
+  margin-left: 10px;
+}
+
+.form-sign {
+  display: flex;
+  flex-direction: column;
+
+.form-sign__label {  
+  @include standart-text ($color-text,$font-size,700);
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.form-sign__input {
+  border: 1px solid #ffffff4d;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  background-color: #2f303a;
+  padding: 15px 16px;
+  height: 50px;
+  width: 358px;
+  margin-top: 20px;
+  margin-right: 12px;
+}
+}
