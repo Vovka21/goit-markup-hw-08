@@ -1,6 +1,9 @@
 .our-work {
   padding-top: 94px;
   padding-bottom: 94px;
+  @media screen and  (max-width: 480px) {
+    display: none;;
+  }
 }
 
 
@@ -9,11 +12,17 @@
    line-height: 1.2;
   letter-spacing: 0.03em;
   text-align: center;
+
+@media screen and (max-width: 480px) {  
+    font-size: 28px;
+    margin: 0 auto;
+}
 }
 
 .list-work {
 @include centered;
   margin-top: 50px;
+  
 
 .list-work__item {
   margin-right: 30px;

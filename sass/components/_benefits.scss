@@ -1,5 +1,8 @@
 .benefits {
   padding-top: 94px;
+  @media screen and (max-width:480px) {
+    padding: 60px 0;
+  }
 }
 
 .visually-hidden {
@@ -17,6 +20,10 @@
 
 .advantage {
   display: flex;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
+
 
 .advantage__item {
   margin-left: 30px;
@@ -25,6 +32,14 @@
 &:first-child {
   margin-left: 0px;
 }
+@media screen and (max-width: 480px) {
+ &:not(:first-child) {
+   margin-top: 30px;
+ }
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 
 .advantage__icon {
@@ -32,6 +47,9 @@
   background-color: #f5f4fa;
   width: 270px;
   height: 120px;
+  @media screen and (max-width: 480px) {
+    width: 450px;
+  }
 }
 
 .advantage__heading {
@@ -40,6 +58,7 @@
   letter-spacing: 0.03em;
   padding-bottom: 10px;
   margin-top: 30px;
+  text-align: center
 }
 
 .advantage__text {
@@ -48,3 +67,4 @@
   letter-spacing: 0.03em;
 }
 }
+

@@ -3,28 +3,46 @@
   margin-right: auto;
   background-color: $color-text;
   border-bottom: 1px solid #ececec;
-
-.header__nav {
-@include centered;
-}
+  position: relative;
 
 .header__link-menu {
   margin-left: 93px;
-  margin-right: auto;
+  margin-right: 305px;
+  
 }
+
+@media screen and (max-width:480px) {
+    .header__link-menu,
+    .link-address {
+      display: none;
+    }
+  }
 
 .header__list-menu,
 .list-connection,
-.menu-nav {
+.menu-nav, 
+.header__menu {
   @include centered;
-}
+  }
 }
 
+.header__nav{
+  @include centered;
+  @media screen and  (max-width: 480px) {    
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 15px;
+  }}
+
 .logotype {
+
 .logotype__link {
   margin-top: 24px;
   margin-bottom: 25px;
   display: block;
+  @media screen and(max-width:480px) {
+   margin: 16px 0 ;
+  }
 }
 
 .logotype__studio {
@@ -35,6 +53,9 @@
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.03em;
+  @media screen and (max-width:480px) {
+    font-size: 24px;
+}
 }
 }
 
@@ -43,15 +64,27 @@
   font-family: $font-logo;
   font-size: $font-size-logo;
   font-style: $font-style;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.03em;
+  @media screen and (max-width:480px) {
+   font-size: 24px;
+}
 }
 
-.menu-nav{
+.menu-nav{ 
+  @media screen and (max-width:480px) {
+    margin-top: 32px;
+    margin-left: 40px;
+    margin-bottom: 270px;
+  }
+  
 
 .menu-nav__item {
   margin-right: 50px;
+  @media screen and (max-width:480px) {
+    margin: 0;
+  }
 
 &:last-child {
   margin-right: 0px;
@@ -66,6 +99,11 @@
   padding-bottom: 32px;
   display: block;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width:480px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 40px;
+  }
 
 &:focus,
 &:hover {
@@ -89,14 +127,24 @@
   height: 4px;
   background-color: $color-link;
   border-radius: 2px;
+  @media screen and (max-width:480px) {
+    display: none; 
+  }
 }
 }
 }
 
 .list-connection {
+  @media screen and (max-width:480px) {
+    margin-left: 40px;
+    margin-bottom: 48px;  
+  }
 
 .list-connection__item {
   margin-left: 30px;
+  @media screen and (max-width:480px) {
+    margin-left: 0px;
+  }
 
 &:first-child {
   margin-left: 0px;
@@ -112,7 +160,11 @@
   padding-bottom: 32px;
   display: flex;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  @media screen and (max-width:480px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 34px;
+  }
 
 &:hover .list-connection__icon,
 &:focus .list-connection__icon {
@@ -125,9 +177,106 @@
 }
 }
 
+.list-connection__link-mail {
+  @include standart-text($color-p,24px,500);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  display: flex;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+  padding-top: 16px;
+  padding-bottom: 16px;
+  
+&:focus,
+&:hover {
+  color: $color-link;
+}
+}
+
+
 .list-connection__icon {
   margin-right: 10px;
   fill: $color-p;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width:480px) {
+    display: none;
+  }
+}
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 796px;
+  background-color: white;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  @media screen and (min-width:481px) {
+    display: none;
+  }
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-toggle {
+  position: absolute;
+  content: " ";
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  min-width: 40px;
+  min-height: 40px; 
+  @include centered;
+  &:hover,
+  &:focus {
+  fill: $color-link;
+}
+ 
+  @media screen and (min-width: 768px) {
+    // display: none;
+    visibility: hidden;
+  }
+}
+
+.social-menu {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  margin-bottom: 48px;
+
+  .social-menu__item {
+    @include standart-text($color-link,18px,500);
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    position: relative;
+    margin-left: 20px;
+    
+    &:first-child{
+      margin-left: 0;
+    }
+
+  &:not(:first-child) { 
+  &::after {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  left: -10px;
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: #21212120;  
+  }
+}
 }
 }
