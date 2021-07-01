@@ -21,8 +21,7 @@
   background-position: center;
   max-width: 1600px;
 
-  @media screen and (max-width:480px) {
-    // width: 480px;
+  @media screen and (max-width:479px) {
     width: 100%;
     height: 400px;
     padding-top: 118px;
@@ -45,6 +44,29 @@
     ), url("../images/header-img-2x.jpg");
   }
   }
+
+  @media screen and (min-width: 768px) {
+  width: 100%;
+  height: 400px;
+  padding: 118px 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/header-tablet.jpg");
+    background-size: 768px 400px;
+
+   @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {  
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ), url("../images/header-tablet-2x.jpg");
+  }
+}
 }
 
 .container {
@@ -54,12 +76,17 @@
   padding-left: 15px;
   padding-right: 15px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 479px) {
     width: 100%;
     display: block;
     flex-wrap: wrap;
   }
  
+  @media screen and (min-width: 768px) {
+    // display: flex;
+    width: 100%;
+  }
+
 .container__heading {
   @include standart-text($color-text,44px,900);
   line-height: 1.4;
@@ -68,11 +95,17 @@
   text-align: center;
   margin: 0 auto;
 
- @media screen and (max-width: 480px) {
+ @media screen and (max-width: 479px) {
  font-size: 26px;
  line-height: 1.6;
 //  max-width: 360px;
 margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  font-size: 26px;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 360px;
 }
 }
 }
@@ -85,7 +118,7 @@ margin: 0 auto;
   cursor: pointer;
   border-radius: 4px;
   border: none;
-  margin-top: 30px;
+  // margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   @include standart-text($color-text,16px,700);
