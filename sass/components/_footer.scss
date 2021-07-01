@@ -7,10 +7,11 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
   @media screen and  (max-width: 480px) {
-    flex-direction: column;
-    text-align: center;
     display: block;
+    flex-direction: column;
+    text-align: center;    
   }
 }
 
@@ -26,6 +27,7 @@
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.03em;
+
   @media screen and  (max-width: 480px) {
     font-size: 24px;
   }
@@ -72,6 +74,7 @@
 
 .social {
   padding: 72px 0 100px;
+
   @media screen and  (max-width: 480px) {
     padding: 0;
   }
@@ -81,6 +84,7 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-align: left;
+
   @media screen and  (max-width: 480px) {
     text-align: center;
   }
@@ -90,9 +94,9 @@
 .social-list {
   display: flex;
   margin-top: 20px;
+
   @media screen and  (max-width: 480px) {
     justify-content: center;
-
   }
 
 .social-list__item {
@@ -131,7 +135,9 @@
   display: flex;
   align-items: flex-end;
   padding: 72px 0 100px;
+
   @media screen and  (max-width: 480px) {
+    display: block;
     flex-direction: column;
     padding: 60px 0;
   }
@@ -148,12 +154,17 @@
 .form-sign {
   display: flex;
   flex-direction: column;
+  
+  @media screen and  (max-width: 480px) {
+    display: block;
+  }
 
 .form-sign__label {  
   @include standart-text ($color-text,$font-size,700);
   line-height: 1.15;
   letter-spacing: 0.03em;
   text-align: left;
+
   @media screen and  (max-width: 480px) {
     text-align: center;
   }
@@ -169,8 +180,10 @@
   width: 358px;
   margin-top: 20px;
   margin-right: 12px;
+
   @media screen and  (max-width: 480px) {
-    width: 450px;
+    // width: 450px;
+    width: 100%;
     margin: 20px auto;
   }
 }
