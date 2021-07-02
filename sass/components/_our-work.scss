@@ -1,31 +1,37 @@
 .our-work {
-  padding-top: 94px;
-  padding-bottom: 94px;
 
-  @media screen and  (max-width: 479px) {
+  @media screen and  (min-width: 480px) {
     display: none;;
   }
 
   @media screen and (min-width: 768px) {
     display: none;
   }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 
 .container__text {
-  @include standart-text ($text,36px,700);
-   line-height: 1.2;
-  letter-spacing: 0.03em;
-  text-align: center;
-
-@media screen and (max-width: 479px) {  
-    font-size: 28px;
-    margin: 0 auto;
+   
+@media screen and (min-width: 480px) {  
+    @include standart-text ($text,28px,700);
+    margin: 0 auto 30px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-    font-size: 28px;
-    margin: 0 auto;
+@media screen and (min-width: 768px) {    
+    // margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  font-size: 36px;
 }
 }
 

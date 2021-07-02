@@ -1,57 +1,71 @@
 .clients {
-  padding-top: 94px;
-
-    @media screen and (max-width:479px) {
+  
+    @media screen and (min-width:480px) {
     padding-top: 60px;
     }
 
     @media screen and (min-width: 768px) {
       padding-top: 60px;
     }
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+    }
 }
 
 .firms {
-  display: flex;
-  padding-top: 50px;
-  padding-bottom: 94px;
-
-    @media screen and  (max-width: 479px) {
+  
+    @media screen and  (min-width: 480px) {
     display: block;
-    padding-top: 30px;
+    // padding-top: 30px;
     padding-bottom: 60px;  
     flex-wrap: wrap;
+    flex-direction: row;
+    margin: -15px;
     }
 
     @media screen and (min-width: 768px) {
       // display: inline-block;
       display: flex;
-      padding-top: 30px;
+      padding: 0;
+      // padding-top: 30px;
       padding-bottom: 60px;
       flex-wrap: wrap;
-
+      flex-direction: row;
       margin: -15px;
     }
 
-.firms__item {
-  margin-left: 30px;
-
-    @media screen and  (max-width: 479px) {
+    @media screen and (min-width: 1200px) {
+      // display: flex;
+      @include centered;
+      // flex-direction: row;
+      padding-top: 50px;
+      padding-bottom: 94px;
       margin: 0;
+    }
+
+.firms__item {
+  // margin-left: 30px;
+
+    @media screen and  (min-width: 480px) {
+      // margin: 0;
       display: inline-block;
-      flex-direction: column;
-      width: calc((100% - 2 * 15px) / 2);
+width: 210px;
+margin: 15px;
+      // flex-direction: column;
+      // width: calc((100% - 2 * 15px) / 2);
 
-      &:nth-child(n+3) {
-        margin-top: 30px;
-      } 
+      // &:nth-child(n+3) {
+      //   margin-top: 30px;
+      // } 
 
-      &:nth-child(2n+1) {
-        margin-right: 30px;
-      }
+      // &:nth-child(2n+1) {
+      //   margin-right: 30px;
+      // }
 
-      &:nth-child(2n) {
-      margin-left: -5px;
-      }   
+      // &:nth-child(2n) {
+      // margin-left: -5px;
+      // }   
     }
 
 // &:first-child {
@@ -61,28 +75,52 @@
 @media screen and (min-width: 768px) {
     //  margin: 0;
       display: inline-block;
-      flex-direction: column;
-      width: calc((100% - 3 * 30px) / 3);
+      // flex-direction: column;
+      // width: calc((100% - 3 * 30px) / 3);
+      width: 226px;
       margin: 15px;
-            // width: calc((100% - 3 * 21px) / 3);
+    
+      // &:nth-child(n+3) {
+      //   margin-top: 15px;
+      // } 
 
-//       &:nth-child(n+4) {
-//         margin-top: 30px;
-//       } 
+      // & {
+      //   margin-right: 15px;
+      // }
 
-//       & {
-//         margin-right: 30px;
+//       &:nth-child(2n) {
+//         margin-right: 15;
 //       }
 
-//       &:nth-child(3n) {
-//         margin-right: 0;
-//       }
-
-//       &:nth-child(3n+1) {
-//       margin-left: -5px;
-//       }   
+      // &:nth-child(2n+1) {
+      // margin-left: 15px;
+      // }   
 // }
 }
+
+    @media screen and (min-width: 1200px) {
+      margin: 0;
+      width: 170px;      
+      &:nth-child(n+3) {       
+        margin-top: 0px;
+      } 
+
+      // &:nth-child(2n+1) {
+        // margin-right: 30px;
+        // margin: 0;
+        // margin-right: 0px;
+      // }
+
+      &:nth-child(2n) {
+        margin-left: 0px;
+      }  
+      
+      margin-right: 30px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
 
 .firms__icon {
   display: block;
@@ -96,19 +134,19 @@
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    @media screen and  (max-width: 479px) {        
+    @media screen and  (min-width: 480px) {        
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
     }
 
-    @media screen and (min-width: 768px) {
-      display: flex; 
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-    }
+    // @media screen and (min-width: 768px) {
+    //   display: flex; 
+    //   align-items: center;
+    //   justify-content: center;
+    //   width: 100%;
+    // }
 
 &:focus,
 &:hover {
