@@ -55,7 +55,8 @@
       rgba(47, 48, 58, 0.4)
     ),
     url("../images/header-tablet.jpg");
-    background-size: 768px 400px;
+    // background-size: 768px 400px;
+    background-size: cover;
 
    @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),

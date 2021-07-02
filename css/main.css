@@ -290,12 +290,6 @@ img {
   height: auto;
 }
 
-picture {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 .header {
   margin-left: auto;
   margin-right: auto;
@@ -798,7 +792,7 @@ picture {
     padding: 118px 0;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/header-tablet.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header-tablet.jpg");
-    background-size: 768px 400px;
+    background-size: cover;
   }
 }
 
@@ -1324,6 +1318,15 @@ picture {
 
 .social-list-team .social-list-team__logo {
   fill: currentColor;
+}
+
+.picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .clients {
