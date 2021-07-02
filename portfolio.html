@@ -38,57 +38,50 @@
             <use class="menu-open" href="./images/icons.svg#icon-menu_1"></use>
           </svg>
         </button>
-        <div class="header__menu">
-          <div class="header__link-menu">
-            <nav class="header__list-menu">
-              <ul class="menu-nav">
-                <li class="menu-nav__item">
-                  <a href="./index.html" class="menu-nav__link"> Студия </a>
-                </li>
-                <li class="menu-nav__item">
-                  <a
-                    href="./portfolio.html"
-                    class="menu-nav__link menu-nav__portfolio"
-                  >
-                    Портфолио
-                  </a>
-                </li>
-                <li class="menu-nav__item">
-                  <a href="" class="menu-nav__link"> Контакты </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="link-address">
-            <ul class="list-connection">
-              <li class="list-connection__item">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="list-connection__link"
-                >
-                  <svg class="list-connection__icon" width="16px" height="12px">
-                    <use href="./images/icons.svg#icon-envelope"></use>
-                  </svg>
-                  info@devstudio.com</a
-                >
+        <!-- <div class="header__menu"> -->
+        <div class="header__link-menu">
+          <nav class="header__list-menu">
+            <ul class="menu-nav">
+              <li class="menu-nav__item">
+                <a href="./index.html" class="menu-nav__link"> Студия </a>
               </li>
-              <li class="list-connection__item">
-                <a href="tel:+380961111111" class="list-connection__link"
-                  ><svg
-                    class="list-connection__icon"
-                    width="10px"
-                    height="16px"
-                  >
-                    <use href="./images/icons.svg#icon-smartphone"></use>
-                  </svg>
-                  +38 096 111 11 11
+              <li class="menu-nav__item">
+                <a
+                  href="./portfolio.html"
+                  class="menu-nav__link menu-nav__portfolio"
+                >
+                  Портфолио
                 </a>
               </li>
+              <li class="menu-nav__item">
+                <a href="" class="menu-nav__link"> Контакты </a>
+              </li>
             </ul>
-          </div>
+          </nav>
+        </div>
+
+        <div class="link-address">
+          <ul class="list-connection">
+            <li class="list-connection__item">
+              <a href="mailto:info@devstudio.com" class="list-connection__link">
+                <svg class="list-connection__icon" width="16px" height="12px">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="list-connection__item">
+              <a href="tel:+380961111111" class="list-connection__link"
+                ><svg class="list-connection__icon" width="10px" height="16px">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
+      <!-- </div> -->
     </header>
 
     <!-- Страница -->
@@ -118,14 +111,24 @@
               <div class="projects__card">
                 <a href="" class="projects__link">
                   <div class="projects__overlay">
-                    <img
-                      srcset="
-                        ./images/project-1.jpg    1x,
-                        ./images/project-1-2x.jpg 2x
-                      "
-                      src="./images/project1.jpg"
-                      alt="Ноутбук"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/project1-tab.jpg    1x,
+                          ./images/project1-2x-tab.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/project-1.jpg    1x,
+                          ./images/project-1-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/project1.jpg" alt="Ноутбук" />
+                    </picture>
+
                     <div class="projects__overlay-text">
                       <p class="projects__text">
                         Технокряк это современная площадка распространения
@@ -147,14 +150,23 @@
               <div class="projects__card">
                 <a href="" class="projects__link"
                   ><div class="projects__overlay">
-                    <img
-                      srcset="
-                        ./images/project-2.jpg    1x,
-                        ./images/project-2-2x.jpg 2x
-                      "
-                      src="./images/project2.jpg"
-                      alt="Баскетбол"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/project2-tab.jpg    1x,
+                          ./images/project2-2x-tab.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/project-2.jpg    1x,
+                          ./images/project-2-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/project2.jpg" alt="Баскетболисты" />
+                    </picture>
                     <div class="projects__overlay-text">
                       <p class="projects__text"></p>
                     </div>
@@ -173,14 +185,23 @@
               <div class="projects__card">
                 <a href="" class="projects__link"
                   ><div class="projects__overlay">
-                    <img
-                      srcset="
-                        ./images/project-3.jpg    1x,
-                        ./images/project-3-2x.jpg 2x
-                      "
-                      src="./images/project3.jpg"
-                      alt="Логотип"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/project3-tab.jpg    1x,
+                          ./images/project3-2x-tab.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/project-3.jpg    1x,
+                          ./images/project-3-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/project3.jpg" alt="Ресторан" />
+                    </picture>
                     <div class="projects__overlay-text">
                       <p class="projects__text"></p>
                     </div>
@@ -197,14 +218,23 @@
               <div class="projects__card">
                 <a href="" class="projects__link"
                   ><div class="projects__overlay">
-                    <img
-                      srcset="
-                        ./images/project-4.jpg    1x,
-                        ./images/project-4-2x.jpg 2x
-                      "
-                      src="./images/project4.jpg"
-                      alt="Наушники"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/project4-tab.jpg    1x,
+                          ./images/project4-2x-tab.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/project-4.jpg    1x,
+                          ./images/project-4-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/project4.jpg" alt="Наушники" />
+                    </picture>
                     <div class="projects__overlay-text">
                       <p class="projects__text"></p>
                     </div>
@@ -221,14 +251,23 @@
               <div class="projects__card">
                 <a href="" class="projects__link"
                   ><div class="projects__overlay">
-                    <img
-                      srcset="
-                        ./images/project-5.jpg    1x,
-                        ./images/project-5-2x.jpg 2x
-                      "
-                      src="./images/project5.jpg"
-                      alt="Коробки"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/project5-tab.jpg    1x,
+                          ./images/project5-2x-tab.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/project-5.jpg    1x,
+                          ./images/project-5-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/project5.jpg" alt="Коробки" />
+                    </picture>
                     <div class="projects__overlay-text">
                       <p class="projects__text"></p>
                     </div>
@@ -245,14 +284,23 @@
               <div class="projects__card">
                 <a href="" class="projects__link"
                   ><div class="projects__overlay">
-                    <img
-                      srcset="
-                        ./images/project-6.jpg    1x,
-                        ./images/project-6-2x.jpg 2x
-                      "
-                      src="./images/project6.jpg"
-                      alt="Монитор"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/project6-tab.jpg    1x,
+                          ./images/project6-2x-tab.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/project-6.jpg    1x,
+                          ./images/project-6-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/project6.jpg" alt="Монитор" />
+                    </picture>
                     <div class="projects__overlay-text">
                       <p class="projects__text"></p>
                     </div>
@@ -271,14 +319,23 @@
               <div class="projects__card">
                 <a href="" class="projects__link"
                   ><div class="projects__overlay">
-                    <img
-                      srcset="
-                        ./images/project-7.jpg    1x,
-                        ./images/project-7-2x.jpg 2x
-                      "
-                      src="./images/project7.jpg"
-                      alt="Книга"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/project7-tab.jpg    1x,
+                          ./images/project7-2x-tab.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/project-7.jpg    1x,
+                          ./images/project-7-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/project7.jpg" alt="Книга" />
+                    </picture>
                     <div class="projects__overlay-text">
                       <p class="projects__text"></p>
                     </div>
@@ -295,14 +352,23 @@
               <div class="projects__card">
                 <a href="" class="projects__link"
                   ><div class="projects__overlay">
-                    <img
-                      srcset="
-                        ./images/project-8.jpg    1x,
-                        ./images/project-8-2x.jpg 2x
-                      "
-                      src="./images/project8.jpg"
-                      alt="Бирка"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/project8-tab.jpg    1x,
+                          ./images/project8-2x-tab.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/project-8.jpg    1x,
+                          ./images/project-8-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/project8.jpg" alt="Бирка" />
+                    </picture>
                     <div class="projects__overlay-text">
                       <p class="projects__text"></p>
                     </div>
@@ -319,14 +385,23 @@
               <div class="projects__card">
                 <a href="" class="projects__link"
                   ><div class="projects__overlay">
-                    <img
-                      srcset="
-                        ./images/project-9.jpg    1x,
-                        ./images/project-9-2x.jpg 2x
-                      "
-                      src="./images/project9.jpg"
-                      alt="Ноут"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/project9-tab.jpg    1x,
+                          ./images/project9-2x-tab.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/project-9.jpg    1x,
+                          ./images/project-9-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/project9.jpg" alt="Нетбук" />
+                    </picture>
                     <div class="projects__overlay-text">
                       <p class="projects__text"></p>
                     </div>
