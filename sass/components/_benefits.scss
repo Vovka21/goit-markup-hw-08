@@ -1,8 +1,8 @@
 .benefits {
   
-  @media screen and (min-width:480px) {
+  // @media screen and (max-width:479px) and (min-width:480px) {
     padding: 60px 0;
-  }
+  // }
 
   @media screen and (min-width: 768px) {
     padding: 60px 0;
@@ -29,10 +29,10 @@
 
 .advantage {
     
-  @media screen and (min-width: 480px) {
+  // @media screen and (max-width:479px) and (min-width: 480px) {
     display: block;
     flex-direction: column;
-  }
+  // }
 
   @media screen and (min-width: 768px) {
     // display: block;
@@ -51,7 +51,7 @@
 
 .advantage__item {
  
-@media screen and (min-width: 480px) {
+// @media screen and (max-width:479px) and (min-width: 480px) {
  &:not(:first-child) {
    margin-top: 30px;
  }
@@ -59,7 +59,7 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-}
+// }
 
 @media screen and (min-width: 768px) {
   // margin: 0;
@@ -119,10 +119,10 @@
   width: 270px;
   height: 120px;
 
-  @media screen and (min-width: 480px) {
+  // @media screen and (max-width:479px) and (min-width: 480px) {
     // width: 450px;
     width: 100%;
-  }
+  // }
 
   @media screen and (min-width: 768px) {
     display: flex;
