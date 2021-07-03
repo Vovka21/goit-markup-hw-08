@@ -16,18 +16,19 @@
 .firms {
   
 
-
     // @media screen and  (min-width:320px) and (min-width: 480px) {
     display: block;
     // padding-top: 30px;
     padding-bottom: 60px;  
-    flex-wrap: wrap;
-    flex-direction: row;
+    // flex-wrap: wrap;
+    // flex-direction: row;
     margin: -15px;
     // }
 
-    justify-content: space-between;
-    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    // justify-content: space-between;
+    // flex-direction: column;
 
 
 
@@ -46,9 +47,9 @@
       // display: flex;
       @include centered;
       // flex-direction: row;
-      padding-top: 50px;
+      // padding-top: 50px;
       padding-bottom: 94px;
-      margin: 0;
+      margin: -15px;
     }
 
 .firms__item {
@@ -56,9 +57,10 @@
 
     // @media screen and  (min-width:320px) and (min-width: 480px) {
       // margin: 0;
-      display: inline-block;
-width: 210px;
-margin: 15px;
+      display: inline-block;    
+    // width: 210px;
+    width: calc((100% - 2 * 32px) / 2);
+    margin: 15px;
       // flex-direction: column;
       // width: calc((100% - 2 * 15px) / 2);
 
@@ -106,11 +108,11 @@ margin: 15px;
 }
 
     @media screen and (min-width: 1200px) {
-      margin: 0;
+      margin: 15px;
       width: 170px;      
-      &:nth-child(n+3) {       
-        margin-top: 0px;
-      } 
+      // &:nth-child(n+3) {       
+      //   margin-top: 0px;
+      // } 
 
       // &:nth-child(2n+1) {
         // margin-right: 30px;
@@ -118,16 +120,16 @@ margin: 15px;
         // margin-right: 0px;
       // }
 
-      &:nth-child(2n) {
-        margin-left: 0px;
-      }  
+      // &:nth-child(2n) {
+      //   margin-left: 0px;
+      // }  
       
-      margin-right: 30px;
+      // margin-right: 30px;
       }
 
-      &:last-child {
-        margin-right: 0;
-      }
+      // &:last-child {
+      //   margin-right: 0;
+      // }
 
 .firms__icon {
   display: block;
