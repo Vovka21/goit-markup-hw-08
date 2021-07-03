@@ -1458,6 +1458,9 @@ img {
 
 @media screen and (min-width: 768px) {
   .footer .footer-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1588,6 +1591,12 @@ img {
 
 .social {
   padding: 60px 0 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .social {
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1743,8 +1752,14 @@ img {
   background-color: #2f303a;
   padding: 15px 16px;
   height: 50px;
-  width: 100%;
+  min-width: 320px;
   margin: 20px auto;
+}
+
+@media screen and (min-width: 480px) {
+  .form-sign .form-sign__input {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
