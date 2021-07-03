@@ -146,7 +146,7 @@
 }
 
 .advantage__text {
-@include standart-text($text,$font-size,$font-weight);
+@include standart-text($color-p,$font-size,$font-weight);
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
