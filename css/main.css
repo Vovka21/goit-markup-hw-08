@@ -821,6 +821,14 @@ img {
   padding: 0;
 }
 
+@media screen and (max-width: 479px) {
+  .container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -1748,8 +1756,13 @@ img {
   background-color: #2f303a;
   padding: 15px 16px;
   height: 50px;
-  min-width: 320px;
   margin: 20px auto;
+}
+
+@media screen and (max-width: 479px) {
+  .form-sign .form-sign__input {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -1760,7 +1773,6 @@ img {
 
 @media screen and (min-width: 768px) {
   .form-sign .form-sign__input {
-    width: 450px;
     margin: 20px auto;
   }
 }
