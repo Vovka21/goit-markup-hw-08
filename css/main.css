@@ -1695,6 +1695,7 @@ img {
         -ms-flex-direction: row;
             flex-direction: row;
     padding: 72px 0 100px;
+    margin-top: 0;
   }
 }
 
